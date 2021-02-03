@@ -80,3 +80,5 @@ public fun <R, T> (suspend R.() -> T).startCoroutine(receiver: R,completion: Con
         2、ContinuationInterceptor在每次（恢复）执行协程体时调用
 
         3、SuspendLambda是协程函数体
+
+        4、如果函数被标记为suspend fun 编译器在编译的时候会给fun自动添加一个continuation（complete）
